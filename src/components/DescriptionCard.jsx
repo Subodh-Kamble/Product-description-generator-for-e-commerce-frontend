@@ -13,7 +13,7 @@ const DescriptionCard = ({ description, index,number, productId, onAnalyzed }) =
       setAnalyzing(true);
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${productId}/descriptions/${description.id}/analyze`,
+        `https://product-description-generator-for-e.onrender.com/api/products/${productId}/descriptions/${description.id}/analyze`,
         { method: "POST" }
       );
 

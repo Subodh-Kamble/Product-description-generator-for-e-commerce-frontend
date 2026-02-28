@@ -24,7 +24,7 @@ const Dashboard = () => {
       }
 
       const response = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products?user_id=${user.uid}`
+        `https://product-description-generator-for-e.onrender.com/api/products?user_id=${user.uid}`
       );
 
       if (!response.ok) {
@@ -67,7 +67,7 @@ const Dashboard = () => {
       }
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/search?${params.toString()}`
+        `https://product-description-generator-for-e.onrender.com/api/products/search?${params.toString()}`
       );
 
       const result = await res.json();

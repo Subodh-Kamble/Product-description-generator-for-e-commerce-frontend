@@ -19,7 +19,7 @@ const DescriptionGenerator = ({ onGenerated }) => {
       setMessage("");
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}/generate`,
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}/generate`,
         {
           method: "POST",
           headers: {

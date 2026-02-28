@@ -17,7 +17,7 @@ const EditProductPage = () => {
     const fetchProduct = async () => {
       try {
         const res = await fetch(
-          `https://product-description-generator-for-e.vercel.app/api/products/${id}`
+          `https://product-description-generator-for-e.onrender.com/api/products/${id}`
         );
 
         const data = await res.json();
@@ -40,7 +40,7 @@ const EditProductPage = () => {
   const handleUpdate = async (updatedData) => {
     try {
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}`,
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}`,
         {
           method: "PATCH",
           headers: {

@@ -40,7 +40,7 @@ const ProductDetailPage = () => {
       if (!user) throw new Error("Not authenticated");
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}?user_id=${user.uid}`,
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}?user_id=${user.uid}`,
         {
           method: "DELETE",
         }
@@ -69,7 +69,7 @@ const ProductDetailPage = () => {
       setKeywordError("");
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}/keywords`,
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}/keywords`,
         { method: "POST" }
       );
 
@@ -93,7 +93,7 @@ const ProductDetailPage = () => {
   const fetchProduct = async () => {
     try {
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}`
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}`
       );
 
       const result = await res.json();
@@ -118,7 +118,7 @@ const ProductDetailPage = () => {
       setAnalyticsError("");
 
       const res = await fetch(
-        `https://product-description-generator-for-e.vercel.app/api/products/${id}/analytics`
+        `https://product-description-generator-for-e.onrender.com/api/products/${id}/analytics`
       );  
 
       const result = await res.json();

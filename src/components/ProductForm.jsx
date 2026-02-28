@@ -56,7 +56,7 @@ const ProductForm = ({
       const user = auth.currentUser;
       if (!user) throw new Error("User not authenticated");
 
-      const response = await fetch("https://product-description-generator-for-e.vercel.app/api/products", {
+      const response = await fetch("https://product-description-generator-for-e.onrender.com/api/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
