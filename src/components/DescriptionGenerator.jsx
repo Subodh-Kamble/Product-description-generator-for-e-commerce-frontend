@@ -18,8 +18,8 @@ const DescriptionGenerator = ({ onGenerated }) => {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products/${id}/generate`,
+      const BASE = import.meta.env.VITE_API_BASE;
+      const res = await fetch(`${BASE}/api/products/${id}/generate`,
         {
           method: "POST",
           headers: {

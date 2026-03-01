@@ -21,8 +21,9 @@ const ProductCard = ({ product, onDelete }) => {
     const user = auth.currentUser;
     if (!user) throw new Error("Not authenticated");
 
+    const BASE = import.meta.env.VITE_API_BASE;
     const res = await fetch(
-      `https:/product-description-generator-for-e.vercel.app/api/products/${product.id}?user_id=${user.uid}`,
+      `${BASE}/api/products/${product.id}?user_id=${user.uid}`,
       { method: "DELETE" }
     );
 

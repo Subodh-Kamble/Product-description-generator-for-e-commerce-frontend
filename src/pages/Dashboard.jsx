@@ -23,8 +23,9 @@ const Dashboard = () => {
         throw new Error("User not authenticated");
       }
 
+      const BASE = import.meta.env.VITE_API_BASE;
       const response = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products?user_id=${user.uid}`
+        `${BASE}/api/products?user_id=${user.uid}`
       );
 
       if (!response.ok) {
@@ -66,8 +67,9 @@ const Dashboard = () => {
         params.append("category", category);
       }
 
+      const BASE = import.meta.env.VITE_API_BASE;
       const res = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products/search?${params.toString()}`
+        `${BASE}/api/products/search?${params.toString()}`
       );
 
       const result = await res.json();

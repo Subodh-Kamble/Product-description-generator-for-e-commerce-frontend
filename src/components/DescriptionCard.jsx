@@ -12,8 +12,8 @@ const DescriptionCard = ({ description, index,number, productId, onAnalyzed }) =
     try {
       setAnalyzing(true);
 
-      const res = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products/${productId}/descriptions/${description.id}/analyze`,
+      const BASE = import.meta.env.VITE_API_BASE;
+      const res = await fetch(`${BASE}/api/products/${productId}/descriptions/${description.id}/analyze`,
         { method: "POST" }
       );
 

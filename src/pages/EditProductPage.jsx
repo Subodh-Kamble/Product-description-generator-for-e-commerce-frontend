@@ -16,8 +16,9 @@ const EditProductPage = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
+        const BASE = import.meta.env.VITE_API_BASE;
         const res = await fetch(
-          `https://product-description-generator-for-e.onrender.com/api/products/${id}`
+          `${BASE}/api/products/${id}`
         );
 
         const data = await res.json();
@@ -39,8 +40,9 @@ const EditProductPage = () => {
 
   const handleUpdate = async (updatedData) => {
     try {
-      const res = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products/${id}`,
+      const BASE = import.meta.env.VITE_API_BASE;
+        const res = await fetch(
+        `${BASE}/api/products/${id}`,
         {
           method: "PATCH",
           headers: {

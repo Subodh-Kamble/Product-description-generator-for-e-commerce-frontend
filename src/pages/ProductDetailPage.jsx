@@ -117,8 +117,9 @@ const ProductDetailPage = () => {
       setAnalyticsLoading(true);
       setAnalyticsError("");
 
+      const BASE = import.meta.env.VITE_API_BASE;
       const res = await fetch(
-        `https://product-description-generator-for-e.onrender.com/api/products/${id}/analytics`
+        `${BASE}/api/products/${id}/analytics`
       );  
 
       const result = await res.json();
